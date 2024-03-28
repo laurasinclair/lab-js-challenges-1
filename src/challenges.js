@@ -45,15 +45,15 @@ function createSequence(n) {
 const numbers = [1, 2, 5, 10, 13, 50];
 
 function multiplyBy(numberArr, number) {
-  let arr = []
+  let newArr = numberArr
 
-  numberArr.forEach(multiply)
+  newArr.forEach(multiply)
 
-  function multiply(item, i, numberArr) {
-    numberArr[i] = item * number;
+  function multiply(item, i, newArr) {
+    newArr[i] = item * number;
   }
 
-  return numberArr
+  return newArr
 }
 
 // console.log(multiplyBy(numbers, 5))
