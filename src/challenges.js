@@ -13,22 +13,50 @@ const repeatedWords = [
   "matter"
 ];
 
-function howManyTimes() {}
+function howManyTimes(arr, wordToSearch) {
+  let sum = 0;
+  for (value of arr) {
+    if (value === wordToSearch) {
+      sum += 1
+    }
+  }
+  return sum
+}
 
 
 
 
 // Iteration 2 | Number Sequence
-function createSequence() {}
+function createSequence(n) {
+  let arr = [];
+  if (n === 0) {
+    return arr
+  }
+  for (i = 0; i <= n; i++) {
+    arr.push(i);
+  }
+  return arr
+}
 
-
+// console.log(createSequence(4))
 
 
 // Iteration 3 | Multiply for Each
 const numbers = [1, 2, 5, 10, 13, 50];
 
-function multiplyBy() {}
+function multiplyBy(numberArr, number) {
+  let arr = []
 
+  numberArr.forEach(multiply)
+
+  function multiply(item, i, numberArr) {
+    numberArr[i] = item * number;
+  }
+
+  return numberArr
+}
+
+// console.log(multiplyBy(numbers, 5))
 
 
 
@@ -36,8 +64,25 @@ function multiplyBy() {}
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
-function filterOut() {}
+function filterOut(arrStrings, arrStringsFilter) {
+  if (arrStrings.length === 0) {
+    return null
+  } else if (arrStringsFilter.length === 0) {
+    return arrStrings
+  } else {
+    let newArr = [];
 
+    for (i = 0; i < arrStrings.length; i++) {
+      if (!arrStringsFilter.includes(arrStrings[i])) {
+        newArr.push(arrStrings[i]);
+      }
+    }
+
+    return newArr
+  }
+}
+
+filterOut(original, toRemove);
 
 
 
@@ -56,9 +101,22 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(duplicateWords) {
+  if (!duplicateWords.length) return null;
 
+  let newArr = duplicateWords;
+  for (let i = duplicateWords.length; i > 0; i--) {
+    if (
+      duplicateWords.lastIndexOf(duplicateWords[i]) !==
+      duplicateWords.indexOf(duplicateWords[i])
+    ) {
+      newArr.splice(i, 1);
+    }
+  }
+  return newArr;
+}
 
+// console.log(uniquifyArray(duplicateWords));
 
 
 // Bonus: Iteration 6 | Product of Adjacent Numbers
@@ -85,4 +143,15 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix) {
+  for (i = 0; i < matrix.length; i++) {
+    // console.log(matrix[i].sort())
+    matrix[i].sort()
+    let biggestNumber = matrix[i][matrix[i].length - 1]
+    console.log(biggestNumber)
+
+    // this is actually SO HARD
+  }
+}
+
+greatestProduct(matrix) 
