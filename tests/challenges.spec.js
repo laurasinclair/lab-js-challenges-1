@@ -175,7 +175,7 @@ describe("Bonus: Iteration 6 | Product of Adjacent Numbers", () => {
     });
 
     it("should return 1 (one) when all numbers of the arrays are 1", () => {
-      let matrix = [
+      let matrix1 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -201,7 +201,7 @@ describe("Bonus: Iteration 6 | Product of Adjacent Numbers", () => {
     });
 
     it("should return 16 when all the numbers of the arrays are 2", () => {
-      let matrix = [
+      let matrix2 = [
         [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
         [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
         [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],

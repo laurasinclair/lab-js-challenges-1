@@ -101,23 +101,63 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray(duplicateWords) {
-  if (!duplicateWords.length) return null;
+// function uniquifyArray(duplicateWords) {
+//   if (!duplicateWords.length) return null;
 
-  let newArr = duplicateWords;
-  for (let i = duplicateWords.length; i > 0; i--) {
-    if (
-      duplicateWords.lastIndexOf(duplicateWords[i]) !==
-      duplicateWords.indexOf(duplicateWords[i])
-    ) {
-      newArr.splice(i, 1);
-    }
-  }
-  return newArr;
-}
+//   let newArr = duplicateWords;
+//   for (let i = duplicateWords.length; i > 0; i--) {
+//     if (
+//       duplicateWords.lastIndexOf(duplicateWords[i]) !==
+//       duplicateWords.indexOf(duplicateWords[i])
+//     ) {
+//       newArr.splice(i, 1);
+//     }
+//   }
+//   return newArr;
+// }
 
 // console.log(uniquifyArray(duplicateWords));
 
+
+
+let aRRay = ['one', 
+'two',
+'three',
+'one',
+'four',
+'five',
+'four']
+
+
+// Take the following array, remove the duplicates, and return a new array.
+// You are more than likely going to want to check out the Array methods 
+// `indexOf` and `includes`
+
+let uniquifyArray = (arr) => {
+  if (!arr.length) return null
+
+  let count = 0
+  function countIfMore (arr, value, index) {
+    
+
+  }
+
+  return arr.map((value, index, arr) => {
+    return value + ' - ' + index + ' - ' + 'hey'
+  })
+
+  // for (i = 0; i < arr.length + 1; i++) {
+  //   for (j = i + 1; j < arr.length + 1; j++) {
+  //     if (arr[i] === arr[j]) {
+  //       count++
+  //       newArr.splice(0,1);
+  //     }
+  //   }
+  // }
+}
+
+console.log(uniquifyArray(aRRay))
+// "crab", "contagious", "sharp", "playground", "communion"
 
 // Bonus: Iteration 6 | Product of Adjacent Numbers
 const matrix = [
@@ -144,14 +184,17 @@ const matrix = [
 ];
 
 function greatestProduct(matrix) {
-  for (i = 0; i < matrix.length; i++) {
-    // console.log(matrix[i].sort())
-    matrix[i].sort()
-    let biggestNumber = matrix[i][matrix[i].length - 1]
-    console.log(biggestNumber)
+  let biggestNumHorizontal = 0;
+  let test = 0
 
-    // this is actually SO HARD
+  for (i = 0; i < matrix.length; i++) {
+    for (j = 0; j < matrix[i].length - 3; j++) {
+      // console.log(matrix[i][j]);
+      biggestNum = matrix[i][j] * matrix[i][j + 1] * matrix[i][j + 2] * matrix[i][j + 3]
+    }
   }
+  return
 }
+
 
 greatestProduct(matrix) 
